@@ -21,7 +21,7 @@ class animated_graph(object):
         # self.df = feeder.data
         # self.df.index = pd.to_datetime(self.df.index)
         # self.myiter = feeder.iterator
-        self.colors = ('b','g','r','c','m','y','k','b','g','r','c','m','y','k')
+        self.colors = ('b','g','r','c','m','y','k','b','g','r','c','m','y','k') #TODO
         
         self.fig = plt.figure(figsize=(10, 6))
 

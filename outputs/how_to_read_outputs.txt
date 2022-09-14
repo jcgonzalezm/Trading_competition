@@ -1,0 +1,6 @@
+**HOW TO READ EXCEL OUTPUT**
+
+This excel represent the time, price and indicators that activated the buy statement of each trader.
+We will have one sheet per each run executed. The number of runs will depened on the amont of traders and generations set
+
+Use this output to find the triggers of each trader.

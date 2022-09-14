@@ -3,9 +3,10 @@ stock = SPY
 key = QXDW7T3QI0W3B9N5
 shortdataby = 0
 initial_amount = 10000
-display_graph=0
+display_graph = 0
 traders_initial_amount_multiplier=2
 target_profit = 0.05
+manual_stop_at_each_run = 0
 
 [MODEL]
 number_of_genomes = 10

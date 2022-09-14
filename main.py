@@ -40,7 +40,8 @@ class run(object):
             self.stock = config['DEFAULT']['stock']
             self.key = config['DEFAULT']['key']
             self.shortdataby = config['DEFAULT']['shortdataby']
-            self.display_graph = int(config['DEFAULT']['display_graph'])
+            self.display_graph = int(config['DEFAULT']['display_graph']) # show matplotlib graph or not. This is primarly for reasoning purposes
+            self.manual_stop_at_each_run = int(config['DEFAULT']['manual_stop_at_each_run']) # allow us to review the results of each completed run.
             self.traders_initial_amount_multiplier = float(config['DEFAULT']['traders_initial_amount_multiplier'])
             self.target_profit = float(config['DEFAULT']['target_profit'])
             
@@ -83,7 +84,8 @@ class run(object):
             self.neat_model.kill_lowest_fitness()
             self.stock_data_runs += 1
             
-            input('stop')
+            if self.manual_stop_at_each_run:
+                input('stop - press anything to continue')
             
         print('exit start_run')
         

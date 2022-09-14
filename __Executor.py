@@ -75,14 +75,3 @@ class ticker():
         except StopIteration: 
             end_procedure('due to end of iterator')
 
-            
-
-
-            
-
-        
-            
-
-
-      
-      
