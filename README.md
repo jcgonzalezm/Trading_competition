@@ -1,8 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/jcgonzalezm/Trading_competition/tree/master/misc/images">
-    <img src="competion.png" alt="Logo" width="80" height="80">
+    <img src="misc/images/competition.png" alt="Logo" width="120" height="120">
   </a>
 
   <h1 align="center">Trading competition</h1>
@@ -22,8 +21,7 @@ Using a NEAT algorithm (Neuroevolution of augmenting topologies) we create a set
 <br />
 <div align="center">
   <h3 align="center">Example visualization</h3>
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="misc/images/graphs.png" alt="Logo" width="80" height="80">
+    <img src="misc/images/graphs.png" alt="Logo" width="500" height="400">
   </a>
 </div>
 
