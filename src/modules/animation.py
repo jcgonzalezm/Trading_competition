@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from datetime import datetime
 import math
-import portfolio
+from modules import portfolio
 
 import pandas as pd
 import numpy as np

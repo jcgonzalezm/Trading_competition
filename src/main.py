@@ -3,14 +3,18 @@
 Main.py
  - This .py its the entry point of contact for the overall process. From all the modules and process are started.
 """
-from getstockdata import stock_data, feeder
-from animation import animated_graph
-from model import NEAT
-
 import os
+import sys
 import configparser
 import pandas as pd
 import numpy as np
+
+from modules.getstockdata import stock_data, feeder
+from modules.animation import animated_graph
+from modules.model import NEAT
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class run(object):
     
@@ -23,7 +27,7 @@ class run(object):
         self.animation = animated_graph()
         self.neat_model = NEAT(NEAT_config_file)
         
-        self.writer = pd.ExcelWriter('outputs/output.xlsx')
+        self.writer = pd.ExcelWriter('./src/outputs/output.xlsx')
         self.sheet_name = 1
         
         execution = self.neat_model.p.run(self.eval_genomes, self.number_of_genomes)
@@ -148,9 +152,10 @@ class run(object):
 
 
 if __name__ == '__main__':
-
     local_dir = os.path.dirname(__file__)
-    NEAT_config_path = os.path.join(local_dir, 'mod_config-feedforward.txt')
-    operation_config_path = os.path.join(local_dir, 'operations_config_file.txt')
+    configs_dir = os.path.join(local_dir, 'configs')
+
+    NEAT_config_path = os.path.join(configs_dir, 'mod_config-feedforward.txt')
+    operation_config_path = os.path.join(configs_dir, 'operations_config_file.txt')
     mymodel = run(NEAT_config_path , operation_config_path)
     

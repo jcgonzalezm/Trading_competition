@@ -6,10 +6,7 @@ Created on Wed Feb  2 17:30:48 2022
 """
 import pandas as pd
 import numpy as np
-# from getstockdata import stock_data, feeder
-# from Executor import ticker
-# from animation import animated_graph
-from portfolio import trader
+from modules.portfolio import trader
 import neat
 
 class NEAT(object):
@@ -26,8 +23,7 @@ class NEAT(object):
         self.p.add_reporter(neat.StdOutReporter(True))
         stats = neat.StatisticsReporter()
         self.p.add_reporter(stats)
-        self.p.add_reporter(neat.Checkpointer(5))
-        
+        #self.p.add_reporter(neat.Checkpointer(5))
         # self.winner = p.run(self.eval_genomes, 10)        
     
         
@@ -86,7 +82,8 @@ class NEAT(object):
             # print(output[0])
             succesfull_buy = trader_ind.buy( 1 , tick_data['close'])
             if succesfull_buy:
-                print('trader buys ' , trader_ind.trader_id , tick_data['close'] , tick_data['close']*(1+self.target_profit))
+                #print('trader buys ' , trader_ind.trader_id , tick_data['close'] , tick_data['close']*(1+self.target_profit))
+                print(f"trader: {trader_ind.trader_id} - bought at price: {tick_data['close']} - expected to sell at: {tick_data['close']*(1+self.target_profit)}")
                 self.traders_bought_sub.append(trader_ind.trader_id)
             
         self.check_if_target_profit_reached(trader_ind , tick_data['close'])
@@ -106,7 +103,8 @@ class NEAT(object):
         
         if time_to_sell:
             if trader_ind.current_status(price):
-                print('trader sells ' , trader_ind.trader_id , df['price'][0] , price)
+                #print('trader sells ' , trader_ind.trader_id , df['price'][0] , price)
+                print(f"trader: {trader_ind.trader_id} - sold stock bought at: {df['price'][0]} - at price: {price}")
                 # print(df)
         
             
