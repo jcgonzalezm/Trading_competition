@@ -19,27 +19,31 @@ Its normal in the banking trading word to set a competion on which expetionally 
 
 Using a NEAT algorithm (Neuroevolution of augmenting topologies) we create a set of 'traders'. They starts with a limited money budget, and by buying, selling or holdings stocks they need to achieve the greatest available result. We gave them real word financial data: stock prices, tecnical indicators (MACD , RSI, etc) and let them run to interpeter the best way to use them. At the end of each run, a period of time-data in which we set and close the competition (example 5 years of data), we cut the worst performing traders and reproduce the best ones. This generational operation will cultivate the best cualities and behaviours of the most succesfull traders, allowing us to reproduce them without on similar new situation on where they were train.
 
+<br />
+<div align="center">
+  <h3 align="center">Example visualization</h3>
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="misc/images/graphs.png" alt="Logo" width="80" height="80">
+  </a>
+</div>
+
 The training data user were free stock prices from [https://www.alphavantage.co/](https://www.alphavantage.co/) split on downwarding/upwarding long trends and low/high volativities periods, as the trained trader will act better by this differentiating circumstances.
 
 On this project we were intended to only represent the training process, not an actual PROD level code that enables us to use a pretrained model.
 
 ## Getting Started
-
 There are 2 main options for executing this repo:
-1. Using Docker
-2. Create yourself an enviroment on your local PC and running on it
 
-
-### 1. Using Docker
+### -- Using Docker
 
 You will need to have Docker installed.
 Just proceed to clone this repository, and execute con terminal `docker run training-competition`
 
-### 2. Creating env
+### -- Creating env
 
-2.1 - Clone this repository into a new folder
-2.2 - Using any Virtual Enviroment manager (in my case I used anaconda) create a env with the dependencies appoinyed on the requirement.txt
-2-3 - Activate your enviroment, go the projects folder and execute: `python /src/main.py`
+1. Clone this repository into a new folder
+2. Using any Virtual Enviroment manager (in my case I used anaconda) create a env with the dependencies appoinyed on the requirement.txt
+3. Activate your enviroment, go the projects folder and execute: `python /src/main.py`
 
 ## Acknowledgments
 
