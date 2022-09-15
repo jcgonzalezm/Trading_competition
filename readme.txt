@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/jcgonzalezm/_misc/blob/master/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="misc/images/competion.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Trading competition</h1>
@@ -21,3 +21,30 @@ Using a NEAT algorithm (Neuroevolution of augmenting topologies) we create a set
 
 The training data user were free stock prices from [https://www.alphavantage.co/](https://www.alphavantage.co/) split on downwarding/upwarding long trends and low/high volativities periods, as the trained trader will act better by this differentiating circumstances.
 
+On this project we were intended to only represent the training process, not an actual PROD level code that enables us to use a pretrained model.
+
+## Getting Started
+
+There are 2 main options for executing this repo:
+1. Using Docker
+2. Create yourself an enviroment on your local PC and running on it
+
+
+### 1. Using Docker
+
+You will need to have Docker installed.
+Just proceed to clone this repository, and execute con terminal `docker run training-competition`
+
+### 2. Creating env
+
+2.1 - Clone this repository into a new folder
+2.2 - Using any Virtual Enviroment manager (in my case I used anaconda) create a env with the dependencies appoinyed on the requirement.txt
+2-3 - Activate your enviroment, go the projects folder and execute: `python /src/main.py`
+
+## Acknowledgments
+
+This project was created and motivate on the amazing job of the following contributors:
+
+* [Tech With Jim - AI Teaches Itself to Play Flappy Bird - Using NEAT Python!](https://www.youtube.com/watch?v=OGHA-elMrxI)
+* [Computer Science - Algorithmic Trading Strategy Using MACD & Python](https://www.youtube.com/watch?v=kz_NJERCgm8&t=689s)
+* [Alpha Vantage: Free Stock APIs in JSON & Excel](https://www.alphavantage.co/)
